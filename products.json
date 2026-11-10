@@ -1,0 +1,11 @@
+
+[
+  {
+    "name": "Soni-Translate",
+    "description": "Dub movies and videos in 100+ languages with AI-powered translation and dubbing.",
+    "price": 15,
+    "thumbnail": "/assets/soni-translate.png",
+    "category": "AI Video Translation",
+    "published": true
+  }
+]
