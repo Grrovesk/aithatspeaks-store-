@@ -1,0 +1,47 @@
+
+media:
+  - name: images
+    label: Product Images
+    input: assets
+    output: /assets
+    extensions:
+      - png
+      - jpg
+      - jpeg
+      - webp
+
+content:
+  - name: products
+    label: Products
+    type: file
+    path: products.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Product Name
+        type: string
+        required: true
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: price
+        label: Price (USD)
+        type: number
+        required: true
+
+      - name: thumbnail
+        label: Product Thumbnail
+        type: image
+        options:
+          media: images
+
+      - name: category
+        label: Category
+        type: string
+
+      - name: published
+        label: Published
+        type: boolean
