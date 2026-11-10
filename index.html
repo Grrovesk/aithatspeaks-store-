@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090817">
 <title>AiThatSpeaks | AI Digital Products</title>
-<meta name="description" content="Discover AI software, creator tools, workflows and digital downloads from AiThatSpeaks.">
+<meta name="description" content="Discover AI software, digital downloads, workflows and creator resources from AiThatSpeaks.">
 
 <style>
 :root {
@@ -19,8 +19,11 @@
   --blue: #438cff;
   --border: rgba(255,255,255,.10);
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -28,18 +31,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
+
 a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
-.container { width: min(1120px, 92%); margin: auto; }
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
 
 header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(9,8,23,.92);
+  background: rgba(9,8,23,.94);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--border);
 }
+
 .nav {
   min-height: 76px;
   display: flex;
@@ -47,9 +55,22 @@ header {
   justify-content: space-between;
   gap: 20px;
 }
-.logo { font-size: 23px; font-weight: 800; letter-spacing: -.8px; }
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -.8px;
+}
+
 .logo span { color: var(--purple); }
-.nav-links { display: flex; gap: 25px; color: var(--muted); font-size: 14px; }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .nav-links a:hover { color: white; }
 
 .hero {
@@ -59,6 +80,7 @@ header {
     radial-gradient(ellipse at 50% 0%, rgba(116,66,220,.27), transparent 55%),
     radial-gradient(ellipse at 90% 40%, rgba(45,105,220,.12), transparent 45%);
 }
+
 .eyebrow {
   display: inline-block;
   border: 1px solid rgba(160,115,255,.35);
@@ -70,6 +92,7 @@ header {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .hero h1 {
   font-size: clamp(38px, 6vw, 65px);
   line-height: 1.12;
@@ -77,13 +100,21 @@ header {
   max-width: 850px;
   letter-spacing: -2px;
 }
+
 .gradient {
   background: linear-gradient(90deg,#b18aff,#559aff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.hero p { color: var(--muted); max-width: 650px; margin: 0 auto 30px; font-size: 17px; }
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 17px;
+}
+
 .primary-btn {
   display: inline-block;
   padding: 13px 24px;
@@ -95,18 +126,35 @@ header {
   cursor: pointer;
   transition: .2s;
 }
-.primary-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+}
 
 .section { padding: 65px 0; }
-.section-heading { text-align: center; margin-bottom: 32px; }
-.section-heading h2 { font-size: 32px; margin: 0 0 8px; }
-.section-heading p { color: var(--muted); margin: 0; }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin: 0;
+}
 
 .toolbar {
   display: flex;
   justify-content: center;
   margin: 0 auto 30px;
 }
+
 .search {
   width: min(500px,100%);
   background: var(--surface);
@@ -116,6 +164,7 @@ header {
   padding: 13px 16px;
   outline: none;
 }
+
 .search:focus { border-color: var(--purple); }
 
 .products {
@@ -123,6 +172,7 @@ header {
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 22px;
 }
+
 .product {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -130,32 +180,29 @@ header {
   overflow: hidden;
   transition: .25s;
 }
-.product:hover { transform: translateY(-5px); border-color: rgba(150,105,255,.5); }
+
+.product:hover {
+  transform: translateY(-5px);
+  border-color: rgba(150,105,255,.5);
+}
+
 .product-art {
-  min-height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 190px;
   background:
     radial-gradient(circle at 50% 40%,rgba(123,76,255,.35),transparent 55%),
     linear-gradient(135deg,#211844,#101b39);
-  position: relative;
   overflow: hidden;
 }
-.product-art::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 50%;
+
+.product-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.product-icon {
-  font-size: 65px;
-  z-index: 1;
-  filter: drop-shadow(0 0 20px rgba(160,115,255,.55));
-}
+
 .product-content { padding: 22px; }
+
 .product-tag {
   display: inline-block;
   font-size: 11px;
@@ -165,8 +212,19 @@ header {
   background: rgba(140,90,255,.13);
   border: 1px solid rgba(140,90,255,.25);
 }
-.product h3 { margin: 13px 0 7px; font-size: 20px; }
-.product p { margin: 0; color: var(--muted); font-size: 14px; min-height: 48px; }
+
+.product h3 {
+  margin: 13px 0 7px;
+  font-size: 20px;
+}
+
+.product p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 48px;
+}
+
 .product-bottom {
   display: flex;
   justify-content: space-between;
@@ -174,8 +232,18 @@ header {
   gap: 10px;
   margin-top: 20px;
 }
-.price { font-size: 23px; font-weight: 800; }
-.price small { color: var(--muted); font-size: 11px; font-weight: 400; }
+
+.price {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.price small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+
 .details-btn {
   background: var(--surface2);
   color: white;
@@ -184,23 +252,43 @@ header {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .details-btn:hover { border-color: var(--purple); }
 
-.empty { display: none; text-align: center; color: var(--muted); padding: 30px; }
+.empty {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 30px;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 35px;
+}
 
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 18px;
 }
+
 .info-card {
   padding: 23px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
 }
+
 .info-card h3 { margin: 0 0 8px; }
-.info-card p { color: var(--muted); font-size: 14px; margin: 0; }
+
+.info-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
 
 .about {
   background: linear-gradient(120deg,rgba(114,65,213,.13),rgba(45,105,220,.08));
@@ -209,7 +297,12 @@ header {
   border-radius: 16px;
   text-align: center;
 }
-.about p { max-width: 700px; margin: 10px auto 0; color: var(--muted); }
+
+.about p {
+  max-width: 700px;
+  margin: 10px auto 0;
+  color: var(--muted);
+}
 
 footer {
   border-top: 1px solid var(--border);
@@ -218,7 +311,11 @@ footer {
   font-size: 13px;
   text-align: center;
 }
-footer a { color: #b89aff; margin: 0 8px; }
+
+footer a {
+  color: #b89aff;
+  margin: 0 8px;
+}
 
 .modal {
   display: none;
@@ -230,7 +327,9 @@ footer a { color: #b89aff; margin: 0 8px; }
   align-items: center;
   justify-content: center;
 }
+
 .modal.show { display: flex; }
+
 .modal-box {
   width: min(480px,100%);
   background: #17152c;
@@ -239,8 +338,19 @@ footer a { color: #b89aff; margin: 0 8px; }
   padding: 28px;
   position: relative;
 }
-.modal-box h2 { margin-top: 0; }
+
+.modal-box h2 { margin-top: 15px; }
+
 .modal-box p { color: var(--muted); }
+
+.modal-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
 .close {
   position: absolute;
   top: 12px;
@@ -251,6 +361,7 @@ footer a { color: #b89aff; margin: 0 8px; }
   font-size: 25px;
   cursor: pointer;
 }
+
 .notice {
   background: rgba(255,190,80,.09);
   border: 1px solid rgba(255,190,80,.25);
@@ -262,8 +373,16 @@ footer a { color: #b89aff; margin: 0 8px; }
 }
 
 @media(max-width:650px) {
-  .nav { flex-wrap: wrap; padding: 15px 0; }
-  .nav-links { gap: 14px; font-size: 12px; }
+  .nav {
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .nav-links {
+    gap: 14px;
+    font-size: 12px;
+  }
+
   .hero { padding: 70px 0 55px; }
   .hero h1 { letter-spacing: -1px; }
   .section { padding: 48px 0; }
@@ -285,189 +404,302 @@ footer a { color: #b89aff; margin: 0 8px; }
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container">
-      <span class="eyebrow">AI Tools • Digital Downloads • Creator Resources</span>
-      <h1>Powerful AI Tools for <span class="gradient">Creative People</span></h1>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">AI Tools • Digital Downloads • Creator Resources</span>
+    <h1>Powerful AI Tools for <span class="gradient">Creative People</span></h1>
+    <p>
+      Discover useful AI software, digital resources, installation packages
+      and workflows to help you create more with artificial intelligence.
+    </p>
+    <a class="primary-btn" href="#products">Explore Products</a>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Our Digital Products</h2>
+      <p>Explore downloads and resources from AiThatSpeaks.</p>
+    </div>
+
+    <div class="toolbar">
+      <input
+        class="search"
+        id="searchInput"
+        type="search"
+        placeholder="Search digital products..."
+      >
+    </div>
+
+    <div class="products" id="productGrid">
+      <div class="loading">Loading products...</div>
+    </div>
+
+    <div class="empty" id="emptyMessage">
+      No products found.
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Why AiThatSpeaks?</h2>
+      <p>Digital resources made for AI enthusiasts and creators.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>⚡ Useful AI Tools</h3>
+        <p>Discover software and resources for practical AI projects.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📦 Digital Downloads</h3>
+        <p>Access downloadable products and creator resources.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🎬 Creator Focused</h3>
+        <p>Resources for video creators, developers and AI enthusiasts.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about">
+      <h2>About AiThatSpeaks</h2>
       <p>
-        Discover useful AI software, digital resources, installation packages
-        and workflows to help you create more with artificial intelligence.
+        AiThatSpeaks explores AI software, voice technology, video tools
+        and creative workflows. This store brings together digital
+        downloads and resources for our community.
       </p>
-      <a class="primary-btn" href="#products">Explore Products</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="products">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Our Digital Products</h2>
-        <p>Explore downloads and resources from AiThatSpeaks.</p>
-      </div>
+<section class="section" id="faq">
+  <div class="container">
 
-      <div class="toolbar">
-        <input class="search" id="searchInput" type="search"
-          placeholder="Search digital products...">
-      </div>
-
-      <div class="products" id="productGrid">
-
-        <!-- PRODUCT 1 -->
-        <article class="product" data-search="sonitranslate soni translate video movie dubbing translation languages">
-          <div class="product-art">
-            <div class="product-icon">🌍</div>
-          </div>
-          <div class="product-content">
-            <span class="product-tag">AI VIDEO TRANSLATION</span>
-            <h3>Soni-Translate</h3>
-            <p>
-              Dub movies and videos in 100+ languages with AI-powered
-              video translation and dubbing.
-            </p>
-            <div class="product-bottom">
-              <div class="price">$15 <small>USD</small></div>
-              <button class="details-btn" onclick="openProduct()">View Details</button>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="empty" id="emptyMessage">No products found.</div>
+    <div class="section-heading">
+      <h2>Frequently Asked Questions</h2>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Why AiThatSpeaks?</h2>
-        <p>Digital resources made for AI enthusiasts and creators.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>How do I purchase?</h3>
+        <p>Checkout will be enabled after the payment provider is connected.</p>
       </div>
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>⚡ Useful AI Tools</h3>
-          <p>Discover software and resources for practical AI projects.</p>
-        </div>
-        <div class="info-card">
-          <h3>📦 Digital Downloads</h3>
-          <p>Access downloadable products and creator resources.</p>
-        </div>
-        <div class="info-card">
-          <h3>🎬 Creator Focused</h3>
-          <p>Resources for video creators, developers and AI enthusiasts.</p>
-        </div>
+
+      <div class="info-card">
+        <h3>How will I receive my ZIP file?</h3>
+        <p>Secure digital delivery will be configured when checkout is integrated.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Can I use the products commercially?</h3>
+        <p>Usage rights depend on each product's license and included terms.</p>
       </div>
     </div>
-  </section>
 
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about">
-        <h2>About AiThatSpeaks</h2>
-        <p>
-          AiThatSpeaks explores AI software, voice technology, video tools
-          and creative workflows. This store brings together digital
-          downloads and resources for our community.
-        </p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="info-grid">
-        <div class="info-card">
-          <h3>How do I purchase?</h3>
-          <p>Checkout will be enabled after the payment provider is connected.</p>
-        </div>
-        <div class="info-card">
-          <h3>How will I receive my ZIP file?</h3>
-          <p>Secure digital delivery will be configured when checkout is integrated.</p>
-        </div>
-        <div class="info-card">
-          <h3>Can I use the products commercially?</h3>
-          <p>Usage rights depend on each product's license and included terms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="container">
     <div><strong>AiThatSpeaks</strong> — AI Tools & Digital Resources</div>
+
     <p>
       <a href="https://www.youtube.com/@Ai-Universe-x9j" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.instagram.com/xsocialandapps" target="_blank" rel="noopener">Instagram</a>
       <a href="https://github.com/Grrovesk" target="_blank" rel="noopener">GitHub</a>
     </p>
+
     <div>© <span id="year"></span> AiThatSpeaks. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- PRODUCT DETAILS MODAL -->
 <div class="modal" id="productModal" onclick="closeOutside(event)">
-  <div class="modal-box">
+  <div class="modal-box" id="modalContent">
     <button class="close" onclick="closeProduct()" aria-label="Close">&times;</button>
-    <span class="product-tag">DIGITAL DOWNLOAD · ZIP</span>
-    <h2>Soni-Translate</h2>
-    <h3>$15 USD</h3>
-    <p>
-      An AI-powered video translation and dubbing package designed to help
-      users translate and dub movies and videos in 100+ languages.
-    </p>
-    <p><strong>Product format:</strong> ZIP file</p>
-    <div class="notice">
-      Checkout is not connected yet. This product is displayed in the store
-      but is not currently available for purchase.
-    </div>
-    <button class="primary-btn" style="width:100%" onclick="alert('Checkout will be available once the payment provider is connected.')">
-      Purchase — Coming Soon
-    </button>
   </div>
 </div>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const searchInput = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product");
+const grid = document.getElementById("productGrid");
 const emptyMessage = document.getElementById("emptyMessage");
+const searchInput = document.getElementById("searchInput");
+const modal = document.getElementById("productModal");
+const modalContent = document.getElementById("modalContent");
 
-searchInput.addEventListener("input", function() {
-  const query = this.value.toLowerCase().trim();
-  let visibleCount = 0;
+let allProducts = [];
 
-  products.forEach(product => {
-    const text = product.dataset.search.toLowerCase();
-    const matches = text.includes(query);
-    product.style.display = matches ? "" : "none";
-    if (matches) visibleCount++;
+function renderProducts() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  const filtered = allProducts.filter(product =>
+    product.published === true &&
+    `${product.name || ""} ${product.description || ""} ${product.category || ""}`
+      .toLowerCase().includes(query)
+  );
+
+  grid.innerHTML = "";
+
+  filtered.forEach(product => {
+    const card = document.createElement("article");
+    card.className = "product";
+
+    const art = document.createElement("div");
+    art.className = "product-art";
+
+    if (product.thumbnail) {
+      const img = document.createElement("img");
+      img.src = product.thumbnail;
+      img.alt = product.name || "Product image";
+      img.loading = "lazy";
+      img.onerror = () => {
+        art.innerHTML = '<div style="display:grid;place-items:center;height:100%;font-size:55px;">📦</div>';
+      };
+      art.appendChild(img);
+    } else {
+      art.innerHTML = '<div style="display:grid;place-items:center;height:100%;font-size:55px;">📦</div>';
+    }
+
+    const content = document.createElement("div");
+    content.className = "product-content";
+
+    const tag = document.createElement("span");
+    tag.className = "product-tag";
+    tag.textContent = product.category || "DIGITAL DOWNLOAD";
+
+    const title = document.createElement("h3");
+    title.textContent = product.name || "Untitled product";
+
+    const description = document.createElement("p");
+    description.textContent = product.description || "";
+
+    const bottom = document.createElement("div");
+    bottom.className = "product-bottom";
+
+    const price = document.createElement("div");
+    price.className = "price";
+    price.textContent = "$" + Number(product.price || 0).toFixed(2);
+
+    const currency = document.createElement("small");
+    currency.textContent = " USD";
+    price.appendChild(currency);
+
+    const button = document.createElement("button");
+    button.className = "details-btn";
+    button.textContent = "View Details";
+    button.onclick = () => showProduct(product);
+
+    bottom.append(price, button);
+    content.append(tag, title, description, bottom);
+    card.append(art, content);
+    grid.appendChild(card);
   });
 
-  emptyMessage.style.display = visibleCount === 0 ? "block" : "none";
-});
+  emptyMessage.style.display = filtered.length ? "none" : "block";
+}
 
-function openProduct() {
-  document.getElementById("productModal").classList.add("show");
+function showProduct(product) {
+  modalContent.innerHTML = "";
+
+  const close = document.createElement("button");
+  close.className = "close";
+  close.textContent = "×";
+  close.setAttribute("aria-label", "Close");
+  close.onclick = closeProduct;
+
+  const tag = document.createElement("span");
+  tag.className = "product-tag";
+  tag.textContent = "DIGITAL DOWNLOAD";
+
+  const title = document.createElement("h2");
+  title.textContent = product.name || "";
+
+  if (product.thumbnail) {
+    const image = document.createElement("img");
+    image.className = "modal-image";
+    image.src = product.thumbnail;
+    image.alt = product.name || "Product";
+    modalContent.appendChild(image);
+  }
+
+  const price = document.createElement("h3");
+  price.textContent = "$" + Number(product.price || 0).toFixed(2) + " USD";
+
+  const description = document.createElement("p");
+  description.textContent = product.description || "";
+
+  const notice = document.createElement("div");
+  notice.className = "notice";
+  notice.textContent =
+    "Checkout is not connected yet. This product is not currently available for purchase.";
+
+  modalContent.append(close, tag, title, price, description, notice);
+  modal.classList.add("show");
 }
 
 function closeProduct() {
-  document.getElementById("productModal").classList.remove("show");
+  modal.classList.remove("show");
 }
 
 function closeOutside(event) {
-  if (event.target.id === "productModal") closeProduct();
+  if (event.target === modal) closeProduct();
 }
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeProduct();
 });
+
+searchInput.addEventListener("input", renderProducts);
+
+async function loadProducts() {
+  try {
+    const response = await fetch("./products.json?v=" + Date.now());
+
+    if (!response.ok) {
+      throw new Error("Could not load products.json");
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error("Product data must be a JSON array");
+    }
+
+    allProducts = data;
+
+    renderProducts();
+
+  } catch (error) {
+    console.error(error);
+    grid.innerHTML = `
+      <div class="loading">
+        Products could not be loaded.<br>
+        Please check the products.json file.
+      </div>
+    `;
+  }
+}
+
+loadProducts();
 </script>
 
 </body>
 </html>
-
 
