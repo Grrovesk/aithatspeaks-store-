@@ -4,297 +4,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AiThatSpeaks — AI software, digital workflows, creator tools and practical guides.">
-<title>AiThatSpeaks — AI Digital Store</title>
+<meta name="theme-color" content="#090817">
+<title>AiThatSpeaks | AI Digital Products</title>
+<meta name="description" content="Discover AI software, creator tools, workflows and digital downloads from AiThatSpeaks.">
 
 <style>
 :root {
-  --bg:#080b14;
-  --panel:#111726;
-  --panel2:#151e30;
-  --border:#27334a;
-  --text:#f4f6ff;
-  --muted:#9ba8bf;
-  --blue:#6485ff;
-  --purple:#a16bff;
+  --bg: #090817;
+  --surface: #121126;
+  --surface2: #191731;
+  --text: #f5f3ff;
+  --muted: #aaa6c4;
+  --purple: #9865ff;
+  --blue: #438cff;
+  --border: rgba(255,255,255,.10);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,Arial,sans-serif;
-  line-height:1.6;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
-a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-.container{width:min(1160px,92%);margin:auto}
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.container { width: min(1120px, 92%); margin: auto; }
 
-/* HEADER */
-header{
-  position:sticky;top:0;z-index:20;
-  background:rgba(8,11,20,.92);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,8,23,.92);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
 }
-.nav{
-  min-height:76px;display:flex;
-  align-items:center;justify-content:space-between;
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-.logo{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:800}
-.logo-icon{
-  width:39px;height:39px;border-radius:12px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--blue),var(--purple));
-  font-size:21px;
-}
-.logo span:last-child{color:#9caeff}
-.nav-links{display:flex;gap:30px;color:#b5bfd2;font-size:14px}
-.nav-links a:hover{color:white}
-.nav-btn{
-  padding:10px 18px;border-radius:9px;
-  background:#202c49;border:1px solid #35466b;
-  font-size:13px;font-weight:700;
-}
+.logo { font-size: 23px; font-weight: 800; letter-spacing: -.8px; }
+.logo span { color: var(--purple); }
+.nav-links { display: flex; gap: 25px; color: var(--muted); font-size: 14px; }
+.nav-links a:hover { color: white; }
 
-/* HERO */
-.hero{
-  position:relative;overflow:hidden;
-  padding:105px 0 85px;
+.hero {
+  padding: 95px 0 75px;
+  text-align: center;
   background:
-  radial-gradient(ellipse at 15% 20%,rgba(76,103,255,.23),transparent 38%),
-  radial-gradient(ellipse at 85% 35%,rgba(151,77,255,.20),transparent 38%);
+    radial-gradient(ellipse at 50% 0%, rgba(116,66,220,.27), transparent 55%),
+    radial-gradient(ellipse at 90% 40%, rgba(45,105,220,.12), transparent 45%);
 }
-.hero-grid{
-  display:grid;grid-template-columns:1.15fr .85fr;
-  align-items:center;gap:55px;
+.eyebrow {
+  display: inline-block;
+  border: 1px solid rgba(160,115,255,.35);
+  color: #c4aaff;
+  background: rgba(130,85,255,.10);
+  padding: 7px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:7px 13px;border:1px solid #39476b;
-  background:#141d35;border-radius:30px;
-  color:#b7c5ff;font-size:12px;font-weight:700;
-  letter-spacing:1px;text-transform:uppercase;
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.12;
+  margin: 24px auto 18px;
+  max-width: 850px;
+  letter-spacing: -2px;
 }
-.dot{width:7px;height:7px;background:#7d9aff;border-radius:50%}
-.hero h1{
-  font-size:clamp(42px,6vw,70px);
-  line-height:1.08;letter-spacing:-2.5px;
-  margin:23px 0;
+.gradient {
+  background: linear-gradient(90deg,#b18aff,#559aff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-.gradient{
-  background:linear-gradient(90deg,#79a0ff,#bd85ff);
-  -webkit-background-clip:text;background-clip:text;
-  color:transparent;
+.hero p { color: var(--muted); max-width: 650px; margin: 0 auto 30px; font-size: 17px; }
+.primary-btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(100deg,#8954ed,#397eea);
+  cursor: pointer;
+  transition: .2s;
 }
-.hero p{max-width:570px;color:#aeb9ce;font-size:17px}
-.hero-actions{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
-.primary,.secondary{
-  padding:14px 22px;border-radius:10px;font-weight:700;
-  font-size:14px;display:inline-flex;align-items:center;gap:9px;
-}
-.primary{
-  background:linear-gradient(110deg,#587eff,#9065ed);
-  color:white;border:0;box-shadow:0 8px 30px #536fff30;
-}
-.secondary{border:1px solid #39445c;background:#111827}
-.primary:hover,.secondary:hover,.nav-btn:hover{filter:brightness(1.15)}
-.hero-art{
-  min-height:350px;border:1px solid #354266;
-  border-radius:24px;position:relative;overflow:hidden;
-  background:linear-gradient(145deg,#182747,#17152e 65%,#261b40);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 30px 90px #0008;
-}
-.orb{
-  width:205px;height:205px;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#c0c9ff,#667eff 38%,#8a4de0 70%,#321d67);
-  box-shadow:0 0 90px #826aff70;
-  display:grid;place-items:center;font-size:85px;
-}
-.float-card{
-  position:absolute;background:#111a2c;
-  border:1px solid #425174;border-radius:12px;
-  padding:12px 16px;font-size:12px;
-  box-shadow:0 10px 35px #0006;
-}
-.float-one{top:35px;left:20px}
-.float-two{bottom:35px;right:18px}
-.float-card strong{display:block;font-size:14px;color:white}
-.float-card span{color:#9eacc7}
+.primary-btn:hover { transform: translateY(-2px); filter: brightness(1.12); }
 
-/* FEATURES */
-.features{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid #202a3e;border-bottom:1px solid #202a3e;
-  padding:24px 0;
-}
-.feature{display:flex;align-items:center;justify-content:center;gap:12px}
-.feature-icon{font-size:23px}
-.feature strong{display:block;font-size:13px}
-.feature small{color:var(--muted);font-size:11px}
+.section { padding: 65px 0; }
+.section-heading { text-align: center; margin-bottom: 32px; }
+.section-heading h2 { font-size: 32px; margin: 0 0 8px; }
+.section-heading p { color: var(--muted); margin: 0; }
 
-/* GENERAL SECTIONS */
-section{padding:82px 0}
-.section-head{text-align:center;margin-bottom:35px}
-.kicker{color:#91a6ff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-.section-head h2{font-size:36px;letter-spacing:-1px;margin:8px 0}
-.section-head p{color:var(--muted);font-size:14px}
+.toolbar {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 30px;
+}
+.search {
+  width: min(500px,100%);
+  background: var(--surface);
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  outline: none;
+}
+.search:focus { border-color: var(--purple); }
 
-/* SEARCH */
-.shop-tools{
-  display:flex;justify-content:space-between;gap:15px;
-  align-items:center;flex-wrap:wrap;margin-bottom:25px;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 22px;
 }
-.search{
-  flex:1;min-width:220px;max-width:390px;
-  background:var(--panel);border:1px solid var(--border);
-  padding:13px 16px;border-radius:10px;color:white;
-  outline:none;
+.product {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .25s;
 }
-.search:focus{border-color:#718cff}
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.filter{
-  padding:9px 15px;border:1px solid var(--border);
-  border-radius:30px;background:var(--panel);
-  color:#b8c3d7;font-size:12px;
+.product:hover { transform: translateY(-5px); border-color: rgba(150,105,255,.5); }
+.product-art {
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(123,76,255,.35),transparent 55%),
+    linear-gradient(135deg,#211844,#101b39);
+  position: relative;
+  overflow: hidden;
 }
-.filter.active,.filter:hover{
-  background:#28365b;border-color:#718cff;color:white;
+.product-art::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+}
+.product-icon {
+  font-size: 65px;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px rgba(160,115,255,.55));
+}
+.product-content { padding: 22px; }
+.product-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  color: #c6adff;
+  background: rgba(140,90,255,.13);
+  border: 1px solid rgba(140,90,255,.25);
+}
+.product h3 { margin: 13px 0 7px; font-size: 20px; }
+.product p { margin: 0; color: var(--muted); font-size: 14px; min-height: 48px; }
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.price { font-size: 23px; font-weight: 800; }
+.price small { color: var(--muted); font-size: 11px; font-weight: 400; }
+.details-btn {
+  background: var(--surface2);
+  color: white;
+  border: 1px solid var(--border);
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.details-btn:hover { border-color: var(--purple); }
+
+.empty { display: none; text-align: center; color: var(--muted); padding: 30px; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+.info-card {
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.info-card h3 { margin: 0 0 8px; }
+.info-card p { color: var(--muted); font-size: 14px; margin: 0; }
+
+.about {
+  background: linear-gradient(120deg,rgba(114,65,213,.13),rgba(45,105,220,.08));
+  border: 1px solid var(--border);
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+}
+.about p { max-width: 700px; margin: 10px auto 0; color: var(--muted); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+footer a { color: #b89aff; margin: 0 8px; }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(0,0,0,.78);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.modal.show { display: flex; }
+.modal-box {
+  width: min(480px,100%);
+  background: #17152c;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+}
+.modal-box h2 { margin-top: 0; }
+.modal-box p { color: var(--muted); }
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  color: white;
+  border: 0;
+  font-size: 25px;
+  cursor: pointer;
+}
+.notice {
+  background: rgba(255,190,80,.09);
+  border: 1px solid rgba(255,190,80,.25);
+  border-radius: 9px;
+  padding: 12px;
+  color: #f3d39c;
+  font-size: 13px;
+  margin: 18px 0;
 }
 
-/* PRODUCT CARDS */
-.products{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
-}
-.product{
-  background:linear-gradient(160deg,#151e30,#101624);
-  border:1px solid var(--border);border-radius:17px;
-  overflow:hidden;transition:.25s;
-}
-.product:hover{
-  transform:translateY(-5px);border-color:#657bcb;
-  box-shadow:0 18px 45px #0005;
-}
-.product-art{
-  height:185px;display:grid;place-items:center;
-  font-size:62px;position:relative;
-  background:radial-gradient(circle at center,#344879,#19243c 65%,#141a2a);
-}
-.product:nth-child(2n) .product-art{
-  background:radial-gradient(circle at center,#49366e,#241c3c 65%,#171525);
-}
-.product:nth-child(3n) .product-art{
-  background:radial-gradient(circle at center,#245267,#172d3d 65%,#111b28);
-}
-.product-art small{
-  position:absolute;top:14px;left:14px;
-  padding:6px 10px;border-radius:20px;
-  background:#0c1425cc;border:1px solid #ffffff25;
-  color:#d2dcff;font-size:10px;
-}
-.product-content{padding:21px}
-.product-content h3{font-size:18px;margin-bottom:8px}
-.product-content p{font-size:13px;color:var(--muted);min-height:63px}
-.product-bottom{
-  display:flex;align-items:center;justify-content:space-between;
-  border-top:1px solid #273149;padding-top:17px;margin-top:17px;
-}
-.price{font-size:14px;font-weight:800;color:#c4ceff}
-.details-btn{
-  background:#26365c;border:1px solid #405787;
-  color:white;padding:9px 13px;border-radius:8px;
-  font-size:12px;font-weight:700;
-}
-.details-btn:hover{background:#364d80}
-.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:45px}
-
-/* ABOUT */
-.about{
-  background:linear-gradient(120deg,#11192b,#17152b);
-  border-top:1px solid #28344d;border-bottom:1px solid #28344d;
-}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about h2{font-size:36px;line-height:1.2;margin:12px 0 18px}
-.about p{color:#aab6cd;font-size:14px;margin-bottom:20px}
-.about-points{display:grid;gap:13px}
-.point{display:flex;gap:12px;align-items:center;color:#cbd4e7;font-size:14px}
-.check{
-  width:27px;height:27px;border-radius:8px;
-  background:#263d61;display:grid;place-items:center;color:#9eb4ff;
-}
-.about-panel{
-  padding:30px;border:1px solid #39466a;
-  background:#0d1423;border-radius:20px;
-}
-.about-panel h3{font-size:19px;margin-bottom:18px}
-.mini-row{
-  display:flex;gap:14px;align-items:center;
-  padding:14px 0;border-bottom:1px solid #273149;
-}
-.mini-row:last-child{border:0}
-.mini-icon{font-size:25px}
-.mini-row strong{font-size:13px;display:block}
-.mini-row small{font-size:11px;color:var(--muted)}
-
-/* FAQ */
-.faq-list{max-width:780px;margin:auto}
-.faq-item{border-bottom:1px solid #273149;padding:19px 0}
-.faq-item summary{font-weight:700;cursor:pointer;font-size:15px}
-.faq-item p{color:var(--muted);font-size:13px;margin-top:12px}
-
-/* FOOTER */
-footer{background:#070a11;padding:45px 0 25px}
-.footer-top{
-  display:flex;justify-content:space-between;
-  gap:30px;flex-wrap:wrap;padding-bottom:30px;
-}
-.footer-brand{max-width:330px}
-.footer-brand p{color:var(--muted);font-size:13px;margin-top:12px}
-.footer-links{display:flex;gap:22px;flex-wrap:wrap;color:#b8c2d6;font-size:13px}
-.footer-links a:hover{color:white}
-.copyright{
-  border-top:1px solid #20283a;padding-top:20px;
-  color:#75829b;font-size:11px;text-align:center;
-}
-
-/* MODAL */
-.modal{
-  display:none;position:fixed;inset:0;z-index:50;
-  background:#000b;align-items:center;justify-content:center;padding:20px;
-}
-.modal.open{display:flex}
-.modal-box{
-  background:#141d2e;border:1px solid #435174;
-  width:min(500px,100%);border-radius:18px;padding:28px;
-  position:relative;
-}
-.close{
-  position:absolute;right:17px;top:12px;
-  background:none;border:0;color:white;font-size:25px;
-}
-.modal-icon{font-size:48px;margin-bottom:10px}
-.modal-box h3{font-size:23px;margin-bottom:10px}
-.modal-box p{color:var(--muted);font-size:14px;margin-bottom:18px}
-.modal-note{font-size:12px;color:#9eafff;border-top:1px solid #303d57;padding-top:15px}
-
-@media(max-width:850px){
- .hero-grid,.about-grid{grid-template-columns:1fr}
- .hero-art{min-height:290px}
- .products{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
- .nav{padding:13px 0;flex-wrap:wrap;gap:14px}
- .nav-links{order:3;width:100%;justify-content:space-between;gap:8px}
- .nav-btn{font-size:11px}
- .hero{padding:70px 0}
- .hero-art{min-height:250px}
- .orb{width:150px;height:150px;font-size:65px}
- .features{grid-template-columns:1fr;gap:20px}
- .feature{justify-content:flex-start;padding-left:20px}
- section{padding:60px 0}
- .products{grid-template-columns:1fr}
- .section-head h2,.about h2{font-size:29px}
+@media(max-width:650px) {
+  .nav { flex-wrap: wrap; padding: 15px 0; }
+  .nav-links { gap: 14px; font-size: 12px; }
+  .hero { padding: 70px 0 55px; }
+  .hero h1 { letter-spacing: -1px; }
+  .section { padding: 48px 0; }
 }
 </style>
 </head>
@@ -302,261 +274,200 @@ footer{background:#070a11;padding:45px 0 25px}
 <body>
 
 <header>
- <div class="container nav">
-  <a href="#" class="logo">
-   <span class="logo-icon">✦</span>
-   <span>AiThatSpeaks</span>
-  </a>
-  <nav class="nav-links">
-   <a href="#">Home</a>
-   <a href="#products">Store</a>
-   <a href="#about">About</a>
-   <a href="#faq">FAQ</a>
-  </nav>
-  <a class="nav-btn" href="https://www.instagram.com/xsocialandapps" target="_blank">Get Support ↗</a>
- </div>
+  <div class="container nav">
+    <a class="logo" href="#">Ai<span>That</span>Speaks</a>
+    <nav class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero">
- <div class="container hero-grid">
-  <div>
-   <div class="eyebrow"><span class="dot"></span> AI DIGITAL PRODUCTS & RESOURCES</div>
-   <h1>Explore. Create.<br><span class="gradient">Build With AI.</span></h1>
-   <p>Discover practical AI software resources, creative workflows and step-by-step guides. Everything you need to explore the world of artificial intelligence.</p>
-   <div class="hero-actions">
-    <a href="#products" class="primary">Explore the Store →</a>
-    <a href="#about" class="secondary">Learn More</a>
-   </div>
-  </div>
-  <div class="hero-art">
-   <div class="float-card float-one"><strong>AI CREATOR TOOLS</strong><span>Explore new possibilities</span></div>
-   <div class="orb">✦</div>
-   <div class="float-card float-two"><strong>Digital Resources</strong><span>Guides • Workflows • Software</span></div>
-  </div>
- </div>
-</section>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">AI Tools • Digital Downloads • Creator Resources</span>
+      <h1>Powerful AI Tools for <span class="gradient">Creative People</span></h1>
+      <p>
+        Discover useful AI software, digital resources, installation packages
+        and workflows to help you create more with artificial intelligence.
+      </p>
+      <a class="primary-btn" href="#products">Explore Products</a>
+    </div>
+  </section>
 
-<div class="container">
- <div class="features">
-  <div class="feature"><span class="feature-icon">💻</span><div><strong>AI Software Resources</strong><small>Tools and applications</small></div></div>
-  <div class="feature"><span class="feature-icon">⚡</span><div><strong>Practical Workflows</strong><small>Ready-to-use resources</small></div></div>
-  <div class="feature"><span class="feature-icon">📘</span><div><strong>Step-by-Step Guides</strong><small>Learn and create</small></div></div>
- </div>
-</div>
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Digital Products</h2>
+        <p>Explore downloads and resources from AiThatSpeaks.</p>
+      </div>
 
-<section id="products">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">THE COLLECTION</div>
-   <h2>Explore Our Store</h2>
-   <p>Find digital resources for your next AI project.</p>
-  </div>
+      <div class="toolbar">
+        <input class="search" id="searchInput" type="search"
+          placeholder="Search digital products...">
+      </div>
 
-  <div class="shop-tools">
-   <input id="search" class="search" type="search" placeholder="⌕  Search digital products..." aria-label="Search products">
-   <div class="filters">
-    <button class="filter active" data-filter="all">All Products</button>
-    <button class="filter" data-filter="software">Software</button>
-    <button class="filter" data-filter="workflow">Workflows</button>
-    <button class="filter" data-filter="guides">Guides</button>
-   </div>
-  </div>
+      <div class="products" id="productGrid">
 
-  <div class="products" id="productGrid"></div>
- </div>
-</section>
+        <!-- PRODUCT 1 -->
+        <article class="product" data-search="sonitranslate soni translate video movie dubbing translation languages">
+          <div class="product-art">
+            <div class="product-icon">🌍</div>
+          </div>
+          <div class="product-content">
+            <span class="product-tag">AI VIDEO TRANSLATION</span>
+            <h3>Soni-Translate</h3>
+            <p>
+              Dub movies and videos in 100+ languages with AI-powered
+              video translation and dubbing.
+            </p>
+            <div class="product-bottom">
+              <div class="price">$15 <small>USD</small></div>
+              <button class="details-btn" onclick="openProduct()">View Details</button>
+            </div>
+          </div>
+        </article>
 
-<section class="about" id="about">
- <div class="container about-grid">
-  <div>
-   <div class="kicker">ABOUT OUR STORE</div>
-   <h2>Making AI More Accessible.</h2>
-   <p>AiThatSpeaks is focused on AI tools, software tutorials and digital resources. We help creators and technology enthusiasts discover useful applications and learn how to work with them.</p>
-   <div class="about-points">
-    <div class="point"><span class="check">✓</span> Practical AI learning resources</div>
-    <div class="point"><span class="check">✓</span> Software and creator-focused tools</div>
-    <div class="point"><span class="check">✓</span> Guides and project workflows</div>
-   </div>
-  </div>
-  <div class="about-panel">
-   <h3>What You'll Find Here</h3>
-   <div class="mini-row"><span class="mini-icon">🧠</span><div><strong>AI Applications</strong><small>Discover useful AI software and utilities</small></div></div>
-   <div class="mini-row"><span class="mini-icon">⚙️</span><div><strong>Creative Workflows</strong><small>Resources for AI-powered projects</small></div></div>
-   <div class="mini-row"><span class="mini-icon">📚</span><div><strong>Learning Materials</strong><small>Installation and usage guides</small></div></div>
-  </div>
- </div>
-</section>
+      </div>
 
-<section id="faq">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">HELP CENTER</div>
-   <h2>Frequently Asked Questions</h2>
-   <p>Some useful information about our digital store.</p>
-  </div>
-  <div class="faq-list">
-   <details class="faq-item">
-    <summary>What kind of products will be available?</summary>
-    <p>Our store is being prepared for AI software resources, digital workflows, guides and other creator-focused digital products.</p>
-   </details>
-   <details class="faq-item">
-    <summary>How will I receive my purchase?</summary>
-    <p>Product delivery instructions will be provided on the product page once the checkout and download system is configured.</p>
-   </details>
-   <details class="faq-item">
-    <summary>How can I get support?</summary>
-    <p>You can contact AiThatSpeaks through our Instagram page for questions and assistance.</p>
-   </details>
-   <details class="faq-item">
-    <summary>Are payments available yet?</summary>
-    <p>Checkout is being configured. A product will only be available for purchase after its payment and delivery arrangements are ready.</p>
-   </details>
-  </div>
- </div>
-</section>
+      <div class="empty" id="emptyMessage">No products found.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why AiThatSpeaks?</h2>
+        <p>Digital resources made for AI enthusiasts and creators.</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>⚡ Useful AI Tools</h3>
+          <p>Discover software and resources for practical AI projects.</p>
+        </div>
+        <div class="info-card">
+          <h3>📦 Digital Downloads</h3>
+          <p>Access downloadable products and creator resources.</p>
+        </div>
+        <div class="info-card">
+          <h3>🎬 Creator Focused</h3>
+          <p>Resources for video creators, developers and AI enthusiasts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about">
+        <h2>About AiThatSpeaks</h2>
+        <p>
+          AiThatSpeaks explores AI software, voice technology, video tools
+          and creative workflows. This store brings together digital
+          downloads and resources for our community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>How do I purchase?</h3>
+          <p>Checkout will be enabled after the payment provider is connected.</p>
+        </div>
+        <div class="info-card">
+          <h3>How will I receive my ZIP file?</h3>
+          <p>Secure digital delivery will be configured when checkout is integrated.</p>
+        </div>
+        <div class="info-card">
+          <h3>Can I use the products commercially?</h3>
+          <p>Usage rights depend on each product's license and included terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
- <div class="container">
-  <div class="footer-top">
-   <div class="footer-brand">
-    <a href="#" class="logo"><span class="logo-icon">✦</span><span>AiThatSpeaks</span></a>
-    <p>Explore AI tools, digital resources and creative workflows. Discover more possibilities with artificial intelligence.</p>
-   </div>
-   <div class="footer-links">
-    <a href="https://www.youtube.com/@Ai-Universe-x9j" target="_blank">YouTube ↗</a>
-    <a href="https://www.instagram.com/xsocialandapps" target="_blank">Instagram ↗</a>
-    <a href="https://github.com/Grrovesk" target="_blank">GitHub ↗</a>
-   </div>
+  <div class="container">
+    <div><strong>AiThatSpeaks</strong> — AI Tools & Digital Resources</div>
+    <p>
+      <a href="https://www.youtube.com/@Ai-Universe-x9j" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/xsocialandapps" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://github.com/Grrovesk" target="_blank" rel="noopener">GitHub</a>
+    </p>
+    <div>© <span id="year"></span> AiThatSpeaks. All rights reserved.</div>
   </div>
-  <div class="copyright">© 2026 AiThatSpeaks. All rights reserved.</div>
- </div>
 </footer>
 
-<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
- <div class="modal-box">
-  <button class="close" id="closeModal" aria-label="Close">×</button>
-  <div class="modal-icon" id="modalIcon"></div>
-  <h3 id="modalTitle"></h3>
-  <p id="modalDescription"></p>
-  <div class="modal-note">Product information and purchase options will be added when this item is ready for sale.</div>
- </div>
+<!-- PRODUCT DETAILS MODAL -->
+<div class="modal" id="productModal" onclick="closeOutside(event)">
+  <div class="modal-box">
+    <button class="close" onclick="closeProduct()" aria-label="Close">&times;</button>
+    <span class="product-tag">DIGITAL DOWNLOAD · ZIP</span>
+    <h2>Soni-Translate</h2>
+    <h3>$15 USD</h3>
+    <p>
+      An AI-powered video translation and dubbing package designed to help
+      users translate and dub movies and videos in 100+ languages.
+    </p>
+    <p><strong>Product format:</strong> ZIP file</p>
+    <div class="notice">
+      Checkout is not connected yet. This product is displayed in the store
+      but is not currently available for purchase.
+    </div>
+    <button class="primary-btn" style="width:100%" onclick="alert('Checkout will be available once the payment provider is connected.')">
+      Purchase — Coming Soon
+    </button>
+  </div>
 </div>
 
 <script>
-/* EDIT THIS LIST TO ADD YOUR REAL PRODUCTS */
-const products = [
- {
-  name:"AI Software Toolkit",
-  category:"software",
-  label:"SOFTWARE",
-  icon:"💻",
-  description:"A collection of useful software resources for AI creators and technology enthusiasts."
- },
- {
-  name:"AI Creator Workflow Pack",
-  category:"workflow",
-  label:"WORKFLOWS",
-  icon:"⚙️",
-  description:"Explore practical workflows and resources for building AI-powered projects."
- },
- {
-  name:"AI Installation Guide",
-  category:"guides",
-  label:"GUIDES",
-  icon:"📘",
-  description:"Step-by-step learning material to help you install and configure AI applications."
- },
- {
-  name:"Local AI Resources",
-  category:"software",
-  label:"SOFTWARE",
-  icon:"🖥️",
-  description:"Resources for exploring and running AI applications on your own computer."
- },
- {
-  name:"AI Automation Workflows",
-  category:"workflow",
-  label:"WORKFLOWS",
-  icon:"🚀",
-  description:"Discover useful automation ideas and workflows for creative projects."
- },
- {
-  name:"AI Creator Handbook",
-  category:"guides",
-  label:"GUIDES",
-  icon:"📚",
-  description:"Helpful information and tutorials for people exploring AI tools."
- }
-];
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const grid=document.getElementById("productGrid");
-const search=document.getElementById("search");
-let activeFilter="all";
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".product");
+const emptyMessage = document.getElementById("emptyMessage");
 
-function renderProducts(){
- const term=search.value.toLowerCase().trim();
- const filtered=products.filter(p=>
-  (activeFilter==="all"||p.category===activeFilter)&&
-  (p.name.toLowerCase().includes(term)||
-   p.description.toLowerCase().includes(term)||
-   p.label.toLowerCase().includes(term))
- );
+searchInput.addEventListener("input", function() {
+  const query = this.value.toLowerCase().trim();
+  let visibleCount = 0;
 
- if(!filtered.length){
-  grid.innerHTML='<div class="empty">No products found. Try another search.</div>';
-  return;
- }
+  products.forEach(product => {
+    const text = product.dataset.search.toLowerCase();
+    const matches = text.includes(query);
+    product.style.display = matches ? "" : "none";
+    if (matches) visibleCount++;
+  });
 
- grid.innerHTML=filtered.map((p)=>{
-  const index=products.indexOf(p);
-  return `
-   <article class="product">
-    <div class="product-art">
-     <small>${p.label}</small>
-     ${p.icon}
-    </div>
-    <div class="product-content">
-     <h3>${p.name}</h3>
-     <p>${p.description}</p>
-     <div class="product-bottom">
-      <span class="price">Coming Soon</span>
-      <button class="details-btn" data-index="${index}">View Details ↗</button>
-     </div>
-    </div>
-   </article>`;
- }).join("");
+  emptyMessage.style.display = visibleCount === 0 ? "block" : "none";
+});
+
+function openProduct() {
+  document.getElementById("productModal").classList.add("show");
 }
 
-document.querySelectorAll(".filter").forEach(btn=>{
- btn.addEventListener("click",()=>{
-  document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  activeFilter=btn.dataset.filter;
-  renderProducts();
- });
+function closeProduct() {
+  document.getElementById("productModal").classList.remove("show");
+}
+
+function closeOutside(event) {
+  if (event.target.id === "productModal") closeProduct();
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") closeProduct();
 });
-
-search.addEventListener("input",renderProducts);
-
-const modal=document.getElementById("productModal");
-grid.addEventListener("click",e=>{
- const btn=e.target.closest("[data-index]");
- if(!btn)return;
- const p=products[Number(btn.dataset.index)];
- document.getElementById("modalIcon").textContent=p.icon;
- document.getElementById("modalTitle").textContent=p.name;
- document.getElementById("modalDescription").textContent=p.description;
- modal.classList.add("open");
-});
-document.getElementById("closeModal").addEventListener("click",()=>modal.classList.remove("open"));
-modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")modal.classList.remove("open")});
-
-renderProducts();
 </script>
 
 </body>
 </html>
+
 
